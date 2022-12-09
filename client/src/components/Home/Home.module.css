@@ -1,0 +1,53 @@
+/* .conteiner {
+    background: red;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(1fr, 5);
+} */
+
+.background {
+    background-image: url("../../assets/mapa-del-mundo-1600x959.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    background: #389ab3;
+    width: 100%;
+    max-height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.conteiner {
+    padding: 50px;
+    background-color: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid white;
+    width: 90%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.continentSelector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 3rem;
+}
+
+.paginado {
+    /* height: 11.5vh; */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 30px;
+}

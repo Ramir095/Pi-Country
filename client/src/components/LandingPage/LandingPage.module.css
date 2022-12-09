@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.background {
+  background-image: url("../../assets/mapa-del-mundo-1600x959.jpg");
+  /* backdrop-filter: blur(16px); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around;
+}
+
+.text {
+  color: white;
+  backdrop-filter: blur(3px); 
+  background-color: var(--container-background-darker);
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 38rem;
+  gap: 3rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 2px solid #fff;
+  text-align: center;
+  position: relative;
+}
+
+.link {
+  background-color: #d9d9d9;
+  color: black;
+  padding: 0.6rem 2.5rem;
+  font-size: 1.8rem;
+  border: 2px solid #389ab3;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #389ab3;
+  color: white;
+}

@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 6rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+/* .header {
+    background: #389ab3;
+    width: 100%;
+    max-height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+} */
+
+.search {
+    color: white;
+}
+
+.home{
+    display: flex;
+    gap: 1rem;
+}
+
+.home a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem
+}
