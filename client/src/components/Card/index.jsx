@@ -4,7 +4,6 @@ import styles from './Card.module.css'
 
 export const Card = ({id, name, flag, continent}) => {
   //console.log("Activities", activities);
-  // linea de prueba asdasd
   return (
     <div className={styles.container}>
       <Link to={`countryDetail/${id}`}>
