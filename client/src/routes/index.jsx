@@ -1,19 +1,15 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Home from './Home/Home'
-import CreateCountry from './CreateCountry/CreateCountry'
-import CountryDetail from './CountryDetail/CountryDetail'
+import { Home, CreateActivity, CountryDetail } from '../Screens'
 
-function RoutesAll() {
+export const RoutesAll = () => {
   return (
     <>
       <Switch>
         <Route path='/home' component={ Home } />
-        <Route path='/createCountry' component={ CreateCountry } />
+        <Route path='/createActivity' component={ CreateActivity } />
         <Route path='/countryDetail/:id' render={ ({match}) => <CountryDetail  match={match} /> } />
       </Switch>
     </>
   )
-}
-
-export default RoutesAll
+};

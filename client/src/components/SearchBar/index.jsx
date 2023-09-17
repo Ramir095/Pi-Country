@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { getCountry } from '../../redux/actions'
-function SearchBar() {
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { getCountry } from '../../redux/actions';
+
+export const SearchBar = () => {
 
   const dispatch = useDispatch()
   const [ country, setCountry ] = useState("");
@@ -21,6 +22,4 @@ function SearchBar() {
          <button type='submit'>Search</button>
     </form>
   )
-}
-
-export default SearchBar
+};

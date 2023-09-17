@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Card.module.css'
 
-function Card({id, name, flag, continent}) {
+export const Card = ({id, name, flag, continent}) => {
   //console.log("Activities", activities);
   return (
     <div className={styles.container}>
@@ -15,6 +15,4 @@ function Card({id, name, flag, continent}) {
       </Link>
     </div>
   )
-}
-
-export default Card
+};

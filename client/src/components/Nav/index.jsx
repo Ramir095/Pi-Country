@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SearchBar from '../SearchBar/SearchBar'
+import { SearchBar } from '../SearchBar'
 import styles from './Nav.module.css'
 
-function Nav({handleClick}) {
+export const Nav = ({handleClick}) => {
   // console.log(handleClick);
   return (
     <>
@@ -15,7 +15,7 @@ function Nav({handleClick}) {
           <SearchBar className={styles.search} />
         </div>
         <div className={styles.home}>
-          <Link to='/createCountry'> Create Activity </Link>
+          <Link to='/createActivity'> Create Activity </Link>
           <button onClick={e => handleClick(e)}>Reload</button>
         </div>
       </div>

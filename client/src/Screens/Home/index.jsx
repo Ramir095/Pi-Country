@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Nav from "../Nav/Nav";
 import { getAllCountries, filterByContinent, orderByName, OrderByPopulation } from "../../redux/actions/index";
-import Cards from "../Cards/Cards";
-import Loading from "../Loading/Loading";
-import Paginado from "../Paginado/Paginado";
+import { Nav, Cards, Loading, Paginado } from '../../components'
 import styles from './Home.module.css';
 
-function Home() {
+export const Home = () => {
   const dispatch = useDispatch();
   let countries = useSelector((state) => state.countries);
   //let activities = useSelector((state) => state.activities)
@@ -113,6 +110,4 @@ function Home() {
       </div>
     </div>
   );
-}
-
-export default Home;
+};

@@ -1,8 +1,8 @@
 import React from 'react'
-import Card from '../Card/Card'
+import { Card } from '../Card'
 import styles from './Cards.module.css'
 
-function Cards({currentCountries}) {
+export const Cards = ({currentCountries}) => {
   //console.log("current", currentCountries[0].Activities);
   return (
     <div className={styles.conteiner}>
@@ -19,6 +19,4 @@ function Cards({currentCountries}) {
         }
     </div>
   )
-}
-
-export default Cards
+};

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Paginado({ countriesPerPage, countries, paginado }) {
+export const Paginado = ({ countriesPerPage, countries, paginado }) => {
   const pageNumbers = [];
   //console.log("page", pageNumbers);
   // aca le quite el Math.slice
@@ -22,6 +22,4 @@ function Paginado({ countriesPerPage, countries, paginado }) {
       </div>
     </div>
   );
-}
-
-export default Paginado;
+};

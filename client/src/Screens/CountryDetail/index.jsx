@@ -2,11 +2,11 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getCountryDetail } from "../../redux/actions";
-import Loading from "../Loading/Loading";
-import Nav from "../Nav/Nav";
+import { Loading } from "../../components/Loading";
+import { Nav } from "../../components/Nav";
 import styles from "./CountryDetail.module.css";
 
-function CountryDetail({ match }) {
+export const CountryDetail = ({ match }) => {
   //console.log(match);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -73,6 +73,4 @@ function CountryDetail({ match }) {
       </div>
     </div>
   );
-}
-
-export default CountryDetail;
+};

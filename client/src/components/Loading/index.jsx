@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './Loading.module.css'
 
-function Loading() {
+export const Loading = () => {
   return (
     <div className={styles.container}>
       <svg
@@ -42,6 +42,4 @@ function Loading() {
 
     </div>
   );
-}
-
-export default Loading;
+};

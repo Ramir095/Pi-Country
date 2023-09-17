@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getAllActivities, createActivity } from "../../redux/actions/index";
 import { useDispatch, useSelector } from "react-redux";
-import Nav from "../Nav/Nav";
+import { Nav } from "../../components/Nav";
 import styles from './CreateCountry.module.css'
 
-function CreateCountry() {
+export const CreateActivity = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries);
   const history = useHistory();
@@ -120,6 +120,4 @@ function CreateCountry() {
       </form>
     </div>
   );
-}
-
-export default CreateCountry;
+};
