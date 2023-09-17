@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './Card.module.css'
 
 export const Card = ({id, name, flag, continent}) => {
+  
   return (
     <div className={styles.container}>
       <Link to={`countryDetail/${id}`}>
