@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  gap: 5px;
+  position: relative;
+}
+
+.search {
+  background: transparent;
+  border: 1px solid #363243;
+  border-radius: 7px;
+  width: 15rem;
+  height: 2.4rem;
+  padding: 5px 33px;
+  font-size: 0.9rem;
+  color: white;
+}
+.search:hover {
+  border: 1px solid #817E8E;
+}
+
+.search::placeholder {
+  color: #666666;
+}
+
+.magnifyingGlass {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 1.3rem;
+}
+
+.button {
+  width: 4rem;
+  height: 2.3rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(39, 58, 80, 0.8); */
+  /* background-color: #263A50; */
+  background-color: #2d455e;
+  border: 2px solid #2E4055;
+  color: white;
+  transition: 0.6s;
+  cursor: pointer;
+}

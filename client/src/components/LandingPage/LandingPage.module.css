@@ -12,7 +12,7 @@
 }
 
 .background {
-  background-image: url("../../assets/mapa-del-mundo-1600x959.jpg");
+  background-image: url("../../assets/pxfuel.jpg");
   /* backdrop-filter: blur(16px); */
   background-position: center;
   background-repeat: no-repeat;
@@ -25,30 +25,39 @@
 }
 
 .text {
-  color: white;
+  color: #66D8F2;
+  height: 80%;
   backdrop-filter: blur(3px); 
   background-color: var(--container-background-darker);
   display: flex;
   flex-direction: column;
-  padding: 10rem 38rem;
-  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   border-radius: 10px;
   margin-bottom: 1rem;
-  border: 2px solid #fff;
   text-align: center;
   position: relative;
 }
 
 .link {
-  background-color: #d9d9d9;
-  color: black;
-  padding: 0.6rem 2.5rem;
+  background-color: rgba(24, 45, 68, 0.9);
+  border: 1px solid #2E4055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 16rem;
+  height: 4rem;
   font-size: 1.8rem;
-  border: 2px solid #389ab3;
+  border-radius: 5px;
   text-decoration: none;
+  transition: 0.6s;
 }
 
+
 .link:hover {
-  background-color: #389ab3;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.6s;
 }
