@@ -1,17 +1,19 @@
 .container {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 .buttons {
   background: rgba(24, 45, 68, 0.9);
   color: white;
   border: none;
-  width: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 5px;
   cursor: pointer;
 }
 .buttons:hover{
-  background: rgba(24, 45, 68, 0.7);
+  background-color: rgba(255, 255, 255, 0.4);
   transition: 0.6s;
 }
 .numbers {
@@ -24,8 +26,10 @@
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  transition: 0.6s;
 }
 .numbers:hover{
-  background: rgba(24, 45, 68, 0.7);
+  /* background: rgba(24, 45, 68, 0.7); */
+  background-color: rgba(255, 255, 255, 0.4);
   transition: 0.6s;
 }

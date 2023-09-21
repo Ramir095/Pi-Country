@@ -1,9 +1,11 @@
 .conteiner {
+    align-items: center;
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+    margin: 0 auto;
     max-width: 1300px;
     min-height: 500px;
-    margin: 0 auto;
-    display: grid;
-    align-items: center;
-    gap: 33px 50px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: auto;
 }
