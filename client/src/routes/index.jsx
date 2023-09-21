@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { Home, CreateActivity, CountryDetail } from '../Screens'
+import { Home, CreateActivity, CountryDetail } from '../screens'
 
 export const RoutesAll = () => {
   return (
