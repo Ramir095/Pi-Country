@@ -3,7 +3,7 @@ import styles from './Loading.module.css'
 
 export const Loading = () => {
   return (
-    <div className={styles.container}>
+    <div className={ styles.container }>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="128px"
