@@ -1,5 +1,7 @@
 import React from "react";
-import styles from './Paginado.module.css'
+import styles from './Paginado.module.css';
+import arrowLeft from '../../assets/arrow-fat-left.svg';
+import arrowRight from '../../assets/arrow-fat-right.svg';
 
 export const Paginado = ({ countriesPerPage, countries, paginado }) => {
   const pageNumbers = [];
@@ -11,7 +13,9 @@ export const Paginado = ({ countriesPerPage, countries, paginado }) => {
   }
   return (
     <div className={ styles.container }>
-      <button className={ styles.buttons }>previous</button>
+      <button className={ styles.buttons }>
+        <img width={30} src={ arrowLeft } alt='flecha para volver a la pagina anterior' />
+      </button>
       <div>
         {pageNumbers &&
           pageNumbers.map((number) => (
@@ -23,7 +27,9 @@ export const Paginado = ({ countriesPerPage, countries, paginado }) => {
               </button>
           ))}
       </div>
-      <button className={ styles.buttons }>next</button>
+      <button className={ styles.buttons }>
+        <img width={30} src={ arrowRight } alt='flecha para volver a la pagina siguiente' />
+      </button>
     </div>
   );
 };
