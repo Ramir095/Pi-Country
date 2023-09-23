@@ -7,10 +7,10 @@ export const Nav = ({ handleClick }) => {
     <>
       <div className={styles.nav}>
         <div className={styles.home}>
-          <Link to='/home'> Home </Link>
+          <Link className={ styles.buttonSign } to='/home'> Home </Link>
         </div>
         <div className={styles.home}>
-          <Link to='/createActivity'> Create Activity </Link>
+          <Link className={ styles.buttonSign } to='/createActivity'> Create Activity </Link>
           {/* <button onClick={e => handleClick(e)}>Reload</button> */}
         </div>
       </div>

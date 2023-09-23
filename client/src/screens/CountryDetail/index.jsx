@@ -14,7 +14,7 @@ export const CountryDetail = ({ match }) => {
   }, [dispatch, match.params.id]);
 
   let country = useSelector((state) => state.countryDetail);
-  // console.log('aca informacion de country', country);
+  console.log('aca informacion de country', country);
   let isLoading = useSelector((state) => state.loaded);
 
   return (
@@ -30,42 +30,45 @@ export const CountryDetail = ({ match }) => {
                     </div>
                   </div>
 
-                  <div className={styles.data}>
-                    <div className={styles.title}>
-                      <p>Name:</p>
-                      <p>{ country.name }</p>
-                    </div>
-                    <p className={styles.title}>Continent: {country.continent}</p>
-                    <p className={styles.title}>Capital: {country.capital}</p>
-                    <p className={styles.title}>
-                      Subregion:{" "}
-                      {country.subregion ? country.subregion : country.continent}
+                  <section className={styles.data}>
+                    <h1 className={ styles.itemOne}>{ country.name }</h1>
+                    <p className={styles.title}>Name:
+                      <span className={ styles.span }>{ country.name }</span>
                     </p>
-                    <p className={styles.title}> Area: {country.area}</p>
-                    <p className={styles.title}>Population: {country.population}</p>
-                  </div>
+                    <p className={styles.title}>Continent:
+                      <span className={ styles.span }>{country.continent}</span>
+                    </p>
+                    <p className={styles.title}>Capital:
+                      <span className={ styles.span }>{country.capital}</span>
+                    </p>
+                    <p className={styles.title}>
+                      Subregion:
+                      <span className={ styles.span }>{country.subregion ? country.subregion : country.continent}</span>
+                    </p>
+                    <p className={styles.title}> Area:
+                      <span className={ styles.span }>{ country.area }</span></p>
+                    <p className={styles.title}>Population:
+                      <span className={ styles.span }>{country.population}</span>
+                    </p>
+                    <div className={ styles.itemLast }>
+                        <p>Activities: </p>
+                        {country.Activities?.length > 0 ? (
+                          country.Activities?.map((a) => (
+                            <ul className={ styles.itemLi } key={a.id}>
+                              <li>name: {a.name}</li>
+                              <li>difficulty: {a.difficulty}</li>
+                              <li>duration: {a.duration}</li>
+                              <li>season: {a.season}</li>
+                            </ul>
+                          ))
+                        ) : (
+                          <h1 style={{ paddingTop: '5px', color: 'white' }}>{"Does not have activities"}</h1>
+                        )}
+                    </div>
+                  </section>
               </>)
             : <Loading />
           }
-
-        {/* <br /> */}
-
-        {/* <div>
-          <p>Activities: </p>
-          {country.Activities?.length > 0 ? (
-            country.Activities?.map((a) => (
-              <ul key={a.id}>
-                <li>name: {a.name}</li>
-                <li>difficulty: {a.difficulty}</li>
-                <li>duration: {a.duration}</li>
-                <li>season: {a.season}</li>
-                <br />
-              </ul>
-            ))
-          ) : (
-            <h1>{"No tiene actividades"}</h1>
-          )}
-        </div> */}
       </div>
     </BackgroundLayout>
   );

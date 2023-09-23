@@ -1,6 +1,6 @@
 
 .conteinter {
-    width: 90%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -11,14 +11,12 @@
 
 .data {
     color: white;
-    /* background-color: brown; */
     display: grid;
     align-items: center;
     justify-content: center;
     gap: 20px 20px;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 0fr));
-    /* height: 100%; */
-    width: 39%;
+    grid-template-columns: 240px 240px;
+    width: 40%;
 }
 
 .card {
@@ -28,6 +26,56 @@
     border-radius: 8px;
     justify-content: center;
     align-items: center;
+}
+
+.itemOne {
+    grid-column-start: 1; 
+    grid-column-end: 3;
+    font-size: 2.5rem;
+}
+
+.title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: rgba(24, 45, 68, 0.7);
+    border: 2px solid #2E4055; 
+    height: 6rem;
+    width: 15rem;
+    color: #66D8F2;
+}
+
+.span {
+    color: white;
+    padding-top: 5px
+}
+
+.itemLast {
+    background-color: rgba(24, 45, 68, 0.7);
+    border-radius: 10px;
+    border: 2px solid #2E4055; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    grid-column-end: 3;
+    grid-column-start: 1; 
+    height: auto;
+    padding: 1rem;
+    text-decoration: none;
+    color: #66D8F2;
+}
+
+.itemLi {
+    display: grid;
+    grid-template-columns: 240px 240px;
+    padding-top: 10px;
+    gap: 3px;
+    color: white;
 }
 
 .flag {
@@ -56,19 +104,4 @@
 }
 .activities ul {
     list-style: none;
-}
-
-.title {
-    /* color: #112A46; */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 1rem;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    background-color: rgba(24, 45, 68, 0.7);
-    border: 2px solid #2E4055; 
-    height: 5rem;
-    width: auto;
 }
