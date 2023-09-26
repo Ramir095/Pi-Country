@@ -18,7 +18,7 @@ export const SearchBar = () => {
 
   return (
     <div className={ styles.searchConten }>
-      <img width={55} className={ styles.logo } src={ rama } alt='Logotipo del creador de la pagina: RamaDev' />
+      <img width={ 55 } className={ styles.logo } src={ rama } alt='Logotipo del creador de la pagina: RamaDev' />
       <form onSubmit={handleSearch} className={ styles.form }>
           {/* <div className={ styles.container }> */}
             <input

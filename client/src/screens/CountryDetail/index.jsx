@@ -14,7 +14,6 @@ export const CountryDetail = ({ match }) => {
   }, [dispatch, match.params.id]);
 
   let country = useSelector((state) => state.countryDetail);
-  console.log('aca informacion de country', country);
   let isLoading = useSelector((state) => state.loaded);
 
   return (
