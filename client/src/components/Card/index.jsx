@@ -12,7 +12,7 @@ export const Card = ({id, name, flag, continent}) => {
       <div className={styles.infoContainer}>
         <img className={styles.img} src={ flag } alt={`Flag of ${ name }`} />
       </div>
-      <Link className={styles.button} to={`countryDetail/${ id }`}>More</Link>
+      <Link className={styles.button} to={`/countryDetail/${ id }`}>More</Link>
     </div>
   )
 };
