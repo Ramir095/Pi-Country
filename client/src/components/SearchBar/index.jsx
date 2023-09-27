@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { getCountry } from '../../redux/actions';
 import search from '../../assets/search.svg';
 import styles from './SearchBar.module.css';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom';
 import rama from '../../assets/rama-dev.png';
 
 export const SearchBar = () => {

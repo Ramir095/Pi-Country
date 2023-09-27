@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { LandingPage } from "./components/LandingPage";
 import { RoutesAll } from "./routes/index";
@@ -6,10 +6,10 @@ import { RoutesAll } from "./routes/index";
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route exact path="/" component={ LandingPage } />
-        <Route path="/*" component={ RoutesAll } />
-      </Switch>
+      <Routes>
+        <Route path="/" element={ <LandingPage /> } />
+        <Route path="/*" element={ <RoutesAll /> } />
+      </Routes>
     </div>
   );
 }
