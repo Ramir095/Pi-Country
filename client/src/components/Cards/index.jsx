@@ -5,7 +5,7 @@ import styles from './Cards.module.css'
 export const Cards = ({currentCountries}) => {
   //console.log("current", currentCountries[0].Activities);
   return (
-    <div className={ styles.conteiner }>
+    <div className={`${ styles.conteiner } animate__animated animate__fadeIn`}>
         {
           currentCountries && currentCountries.map(c => ( 
                 <Card

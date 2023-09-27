@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
 import { getCountryDetail } from "../../redux/actions";
 import { Loading } from "../../components/Loading";
 import styles from "./CountryDetail.module.css";
 import { BackgroundLayout } from "../../layout";
+import { useParams } from "react-router-dom";
 
-export const CountryDetail = ({ match }) => {
-  //console.log(match);
+export const CountryDetail = () => {
   const dispatch = useDispatch();
+  const { id } = useParams();
   useEffect(() => {
-    dispatch(getCountryDetail(match.params.id));
-  }, [dispatch, match.params.id]);
+    dispatch(getCountryDetail(id));
+  }, [dispatch, id]);
 
   let country = useSelector((state) => state.countryDetail);
   let isLoading = useSelector((state) => state.loaded);
@@ -19,7 +19,7 @@ export const CountryDetail = ({ match }) => {
   return (
     
     <BackgroundLayout>
-      <div className={ styles.conteinter } >
+      <div className={ `${styles.conteinter} animate__animated animate__zoomIn` } >
           {
             isLoading
             ? (<>
