@@ -1,11 +1,9 @@
 .conteiner {
-    align-items: center;
+    max-width: 84%;
     display: grid;
-    gap: 20px 20px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    grid-auto-flow: dense;
+    align-items: center;
     justify-items: center;
-    margin: 0 auto;
-    max-width: 1300px;
-    min-height: 500px;
-    width: auto;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
