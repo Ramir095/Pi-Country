@@ -9,6 +9,8 @@ import {
     ORDER_BY_NAME,
     ORDER_BY_POPULATION,
     GET_ALL_ACTIVITIES,
+    LOGIN,
+    LOGOUT
 } from './action-types';
 
 export const getAllCountries = () => {
@@ -60,7 +62,6 @@ export const getAllActivities = () => {
 export const createActivity = (payload) => {
     return async function(dispatch) {
        let response = await axios.post('http://localhost:3001/activities', payload);
-       console.log(response)
        return response;
     }
 };
@@ -86,3 +87,19 @@ export const OrderByPopulation = (payload) => {
         payload,
     };
 };
+
+//----------------------------------------------------------------------------------------------
+
+export const login = (name = '') => {
+    const user = { id: 'ABC', name }
+    return {
+        type: LOGIN,
+        payload: user
+    }
+}
+
+export const logout = (name = '') => {
+    return {
+        type: LOGOUT,
+    }
+}

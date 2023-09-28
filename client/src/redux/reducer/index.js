@@ -8,7 +8,10 @@ import {
     ORDER_BY_POPULATION,
     
     CREATE_ACTIVITY,
-    GET_ALL_ACTIVITIES
+    GET_ALL_ACTIVITIES,
+
+    LOGIN,
+    LOGOUT
 } from "../actions/action-types";
 
 const initialState = {
@@ -16,6 +19,8 @@ const initialState = {
     allCountries: [],
     activities: [],
     countryDetail: {},
+    logged: false,
+    user: {},
     loaded: false
 }
 
@@ -114,7 +119,20 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 activities: action.payload
-            }   
+            }
+
+        case LOGIN:
+            return {
+                ...state,
+                logged: true,
+                user: action.payload
+            }
+        case LOGOUT:
+            return {
+                ...state,
+                logged: false,
+                user: {}
+            }
 
         default:
             return {...state}
