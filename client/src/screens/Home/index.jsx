@@ -20,7 +20,7 @@ export const Home = () => {
             ? <Loading />
             : (
                 <>
-                  <div className={styles.conteiner}>
+                  <div className={styles.conteinerCards}>
                     <Cards currentCountries={currentCountries} />
                   </div>
                   <div className={styles.paginado}>
