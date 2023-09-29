@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getCountry } from '../../redux/actions';
 import search from '../../assets/search.svg';
 import styles from './SearchBar.module.css';
@@ -10,6 +10,7 @@ export const SearchBar = () => {
 
   const dispatch = useDispatch()
   const [ country, setCountry ] = useState("");
+  const user = useSelector(state => state.user);
 
   const handleSearch = (e) =>{
     e.preventDefault();
@@ -31,7 +32,8 @@ export const SearchBar = () => {
           {/* </div> */}
           <button className={ styles.button } type='submit'>Search</button>
       </form>
-      <Link className={ styles.buttonSign } to='/sign-in'>Sign in</Link>
+      <Link className={ user.name ? styles.buttonOut : styles.buttonSign } to='/sign-in'>{`${user.name ? 'Sign out' : 'Sign in'}`}</Link>
+      {/* <p>{ user.name }</p> */}
     </div>
   )
 };
