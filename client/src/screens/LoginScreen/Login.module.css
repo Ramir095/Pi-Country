@@ -1,0 +1,39 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.input {
+  height: 1.5rem;
+}
+
+.buttonLogin {
+  align-items: center;
+  background: linear-gradient(180deg,rgba(87,247,47,.6),rgba(12,176,167,.6));
+  border-radius: 5px;
+  box-shadow: 0 26.2667px 52.5333px rgba(21,41,19,.3345), inset 0 -4px 6px rgba(23,202,95,.57), inset 0 4px 4px #2bce6d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 2.5rem;
+  padding: 0px 0.8rem;
+  transition: 0.6s;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+}
+.buttonLogin:hover {
+  background: linear-gradient(180deg,rgba(87,247,47,.8),rgba(12,176,167,.8));
+  box-shadow: 0 26.2667px 52.5333px rgba(21,41,19,.3345), inset 0 -4px 6px rgba(33,232,113,.97), inset 0 4px 4px rgba(134,255,77,.78);
+  transition: 0.6s;
+}
