@@ -6,22 +6,11 @@ export const useCountries = () => {
 
   const dispatch = useDispatch();
   let countries = useSelector((state) => state.countries);
-  //let activities = useSelector((state) => state.activities)
   let isLoading = useSelector((state) => state.loaded);
-  // Por que ejecuta el getallcontries por cada country
-  // setea la primera pagina/ pagina actual
   const [ currentPage, setCurrentPage ] = useState(1);
   const [ orden, setOrden ] = useState('');
   const [ ordenByPopulation, setOrdenByPopulation ] = useState('');
 
-  // cuantos personajes tengo por pagina
-  //const [countriesPerPage, setCountriesPerPage] = useState(9);
-  //const indexOfLastCountries = currentPage * countriesPerPage; // indice del ultimo personaje en la pagina, osea 10
-  //const indexOfFirstCharacter = indexOfLastCountries - countriesPerPage; // indice del primer personaje osea 0
-  // const currentCountries = countries.slice(
-  //   indexOfFirstCharacter,
-  //   indexOfLastCountries
-  // ); // personajes que voy a tener en cada pagina // slice corta el arreglo en los parametros indicados
   let currentCountries
   if(currentPage === 1) {
     currentCountries = countries.slice(0, 9)
@@ -29,11 +18,11 @@ export const useCountries = () => {
     currentCountries = countries.slice(9 + (currentPage - 2) * 10, 19 + (currentPage - 2) * 10)
   }
 
-  const paginado = (pageNumber) => { setCurrentPage(pageNumber) }; // esta funcion me ayudara a renderizar
+  const paginado = (pageNumber) => { setCurrentPage(pageNumber) }; 
 
   useEffect(() => {
     dispatch(getAllCountries());
-  }, [dispatch]); // el segundo parametro (osea el arreglo) es de lo que depende el "componentDidMount" osea el useEffect. Ejecutate siempre y cuando suceda el dispatch(getAllcountries())
+  }, [dispatch]);
 
   const handleClick = (e) => {
     e.preventDefault();

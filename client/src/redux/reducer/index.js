@@ -15,19 +15,17 @@ import {
 } from "../actions/action-types";
 
 const initialState = {
-    countries: [], // array porque es mas comodo para guardar datos y poder recorrerlos
-    allCountries: [],
     activities: [],
+    allCountries: [],
+    countries: [],
     countryDetail: {},
-    logged: false,
+    loaded: false,
     user: {},
-    loaded: false
 }
 
 const rootReducer = (state = initialState, action) => {
     switch(action.type) {
         case GET_ALL_COUNTRIES:
-           // console.log("Lo que se guarda en redux", action.payload);
             return {
                 ...state,
                 countries: action.payload,
@@ -53,7 +51,6 @@ const rootReducer = (state = initialState, action) => {
             }
         case FILTER_BY_CONTINENT:
             const allCountries = state.allCountries
-            //console.log("allCountries", allCountries[1])
             const continentFilter = action.payload === "All" ? allCountries : allCountries.filter(e => e.continent === action.payload)
             console.log(continentFilter);
             return {
@@ -124,13 +121,11 @@ const rootReducer = (state = initialState, action) => {
         case LOGIN:
             return {
                 ...state,
-                logged: true,
                 user: action.payload
             }
         case LOGOUT:
             return {
                 ...state,
-                logged: false,
                 user: {}
             }
 
