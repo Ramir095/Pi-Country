@@ -67,7 +67,7 @@ export const createActivity = (payload) => {
 };
 //----------------------------------------------------------------------------------------------
 export const filterByContinent = (payload) => {
-    console.log(payload)
+    console.log('dentro de filterByContinent', payload);
     return {
         type: FILTER_BY_CONTINENT,
         payload,
@@ -89,16 +89,19 @@ export const OrderByPopulation = (payload) => {
 };
 
 //----------------------------------------------------------------------------------------------
-
 export const login = (name = '') => {
     const user = { id: 'ABC', name }
+    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('logged', JSON.stringify(true));
     return {
         type: LOGIN,
         payload: user
     }
 }
 
-export const logout = (name = '') => {
+export const logout = () => {
+    localStorage.removeItem('user'); // Limpiamos el local storage
+    localStorage.removeItem('logged');
     return {
         type: LOGOUT,
     }
