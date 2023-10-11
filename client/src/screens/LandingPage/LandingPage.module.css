@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.background {
+  background-image: url("../../assets/pxfuel.jpg");
+  /* backdrop-filter: blur(16px); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around;
+}
+
+.text {
+  color: #66D8F2;
+  height: 80%;
+  backdrop-filter: blur(3px); 
+  background-color: var(--container-background-darker);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.link {
+  background-color: rgba(24, 45, 68, 0.9);
+  border: 1px solid #2E4055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 16rem;
+  height: 4rem;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.6s;
+}
