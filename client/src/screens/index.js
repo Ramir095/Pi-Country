@@ -1,4 +1,4 @@
-export * from './CountryDetail';
-export * from './CreateActivity';
+export * from './CountryDetailScreen';
+export * from './CreateActivityScreen';
 export * from './Home';
 export * from './LoginScreen'

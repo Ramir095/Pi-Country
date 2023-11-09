@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { PrivateRoute, PublicRouter } from './';
-import { CountryDetail, CreateActivity, Home, LoginScreen } from '../screens';
+import { CountryDetailScreen, CreateActivityScreen, Home, LoginScreen } from '../screens';
 
 export const RoutesAll = () => {
   
@@ -9,7 +9,7 @@ export const RoutesAll = () => {
     <>
       <Routes>
         <Route path='/home' element={ <Home /> } />
-        <Route path='/countryDetail/:id' element={ <CountryDetail/> } />
+        <Route path='/countryDetail/:id' element={ <CountryDetailScreen /> } />
         <Route path='/sign-in' element={
           <PublicRouter>
             <LoginScreen />
@@ -17,7 +17,7 @@ export const RoutesAll = () => {
         }/>
         <Route path='/createActivity' element={
           <PrivateRoute>
-            <CreateActivity />
+            <CreateActivityScreen />
           </PrivateRoute>
         } />
       </Routes>
