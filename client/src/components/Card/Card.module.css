@@ -1,15 +1,15 @@
 .container{ 
+    align-items: center;
     background: rgba(24, 45, 68, 0.9);
-    border: 2px solid #2E4055; 
     border-radius: 5px;
+    border: 2px solid #2E4055; 
     display: flex;
     flex-direction: column;
+    height: 20rem;
     justify-content: space-between;
     padding: 17px 0px 22px 0px;
-    align-items: center;
-    width: 15rem;
-    height: 20rem;
     transition: 0.6s;
+    width: 15rem;
 }
 .container:hover{
     background: rgba(24, 45, 68, 0.7);
@@ -35,7 +35,6 @@
 
 .description{
     width: 80%;
-    /* background: red; */
     height: 4.6rem;
     display: flex;
     flex-direction: column;
@@ -60,15 +59,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: rgba(39, 58, 80, 0.8); */
-    /* background-color: #263A50; */
     background-color: #2d455e;
     border: 2px solid #2E4055;
     color: white;
     transition: 0.6s;
 }
 .button:hover {
-    /* border: 2px solid rgba(255, 255, 255, 0.7); */
     background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: 0.6s;

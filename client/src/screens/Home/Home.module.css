@@ -1,7 +1,5 @@
 .background {
     background-image: url("../../assets/volkmer.webp");
-    /* background-position: center;
-    background-repeat: no-repeat; */
     background-size: cover;
     min-height: 100vh;
     width: 100%;
