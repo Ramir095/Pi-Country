@@ -9,8 +9,8 @@ export const CardSkeleton = () => {
       <div className={styles.conteinerCardsFather}>
         <div className={styles.containerCardsSkeleton}>
           {
-            Array(9).fill(0).map(row => (
-              <div className={`${styles.containerSkeleton} row-column-skeleton`}>
+            Array(9).fill(0).map((row, index) => (
+              <div key={index} className={`${styles.containerSkeleton} row-column-skeleton`}>
                 <div className={styles.descriptionSkeleton}>
                   <p><Skeleton height={40} /></p>
                   <p><Skeleton /></p>
