@@ -15,25 +15,24 @@ import {
 
 export const getAllCountries = () => {
     // return async function (dispatch) { // cuando retornamos una funcion, el dispatch lo recibimos aca
-    // const response = await axios.get('http://localhost:3001/countries')
+    // const response = await axios.get('https://render-countries.onrender.com/countries')
     // return dispatch({ type: GET_ALL_COUNTRIES, payload: response.data })
 
     return async function (dispatch) { // cuando retornamos una funcion, el dispatch lo recibimos aca para que lo usemos para despachar la acción
         dispatch({type: START_LOADING})
-        axios.get('http://localhost:3001/countries')
+        axios.get('https://render-countries.onrender.com/countries')
         .then(r => r.data)
         .then(json => dispatch({type: GET_ALL_COUNTRIES, payload: json}))
     }
 };
 
 // return async function (dispatch) { // cuando retornamos una funcion, el dispatch lo recibimos aca
-//     const response = await axios.get('http://localhost:3001/countries')
+//     const response = await axios.get('https://render-countries.onrender.com/countries')
 //     return dispatch({ type: GET_ALL_COUNTRIES, payload: response.data })
-
 export const getCountry = (titulo) => {
     return function(dispatch){
         dispatch({type: START_LOADING})
-        axios.get(`http://localhost:3001/countries?name=${titulo}`)
+        axios.get(`https://render-countries.onrender.com/countries?name=${titulo}`)
         .then(r => r.data)
         .then(json => dispatch({ type: GET_COUNTRY, payload: json }))
         .catch((error) => console.log(error.response.data.message))
@@ -43,7 +42,7 @@ export const getCountry = (titulo) => {
 export const getCountryDetail = (id) => {
     return function(dispatch) {
         dispatch({type: START_LOADING})
-        axios.get(`http://localhost:3001/countries/${id}`)
+        axios.get(`https://render-countries.onrender.com/countries/${id}`)
         .then(r => r.data)
         .then(json => dispatch({ type: GET_COUNTRY_DETAIL, payload: json }))
     }
@@ -53,7 +52,7 @@ export const getCountryDetail = (id) => {
 export const getAllActivities = () => {
     return function(dispatch) {
         dispatch({type: START_LOADING})
-        axios.get('http://localhost:3001/activities')
+        axios.get('https://render-countries.onrender.com/activities')
         .then(r => r.data)
         .then(json => dispatch({ type: GET_ALL_ACTIVITIES, payload: json }))
     }
@@ -61,7 +60,7 @@ export const getAllActivities = () => {
 
 export const createActivity = (payload) => {
     return async function(dispatch) {
-       let response = await axios.post('http://localhost:3001/activities', payload);
+       let response = await axios.post('https://render-countries.onrender.com/activities', payload);
        return response;
     }
 };
