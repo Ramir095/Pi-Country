@@ -1,7 +1,7 @@
 
 .conteinter {
     width: 80%;
-    height: 100%;
+    height: calc(100% - 4rem);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
