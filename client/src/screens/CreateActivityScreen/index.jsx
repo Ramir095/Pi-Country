@@ -37,7 +37,7 @@ export const CreateActivityScreen = () => {
 
   return (
     <BackgroundLayout>
-      <form className={styles.formContainer} onSubmit={(e) => handleSubmit(e)}>
+      <form className={`${styles.formContainer} animate__animated animate__zoomIn`} onSubmit={(e) => handleSubmit(e)}>
         <h1>Complete the form</h1>
         <div className={styles.form}>
           {
@@ -165,7 +165,7 @@ export const CreateActivityScreen = () => {
                       ))}
                     </select>
                   </div>
-                  <ul><li style={{ color: '#66D8F2' }}>{ formState.country.map(el => el + ', ') }</li></ul>
+                  <ul><li style={{ color: '#66D8F2', paddingBottom: '3px' }}>{ formState.country.map(el => el) }</li></ul>
                 </div>
               </section>
               

@@ -23,10 +23,8 @@ export const CountryDetailScreen = () => {
           {
             isLoading
             ? (<>
-                  <div>
-                    <div>
-                      <img src={country.flag} alt={`Flag of ${country.name}`} />
-                    </div>
+                  <div className={styles.flag}>
+                    <img src={country.flag} alt={`Flag of ${country.name}`} />
                   </div>
 
                   <section className={styles.data}>
@@ -54,10 +52,10 @@ export const CountryDetailScreen = () => {
                         {country.Activities?.length > 0 ? (
                           country.Activities?.map((a) => (
                             <ul className={ styles.itemLi } key={a.id}>
-                              <li>name: {a.name}</li>
-                              <li>difficulty: {a.difficulty}</li>
-                              <li>duration: {a.duration}</li>
-                              <li>season: {a.season}</li>
+                              <li className={styles.dateItemLi}>name: <p style={{color: "white"}}>{a.name}</p></li>
+                              <li className={styles.dateItemLi}>difficulty: <p style={{color: "white"}}>{`level ${a.difficulty}`}</p></li>
+                              <li className={styles.dateItemLi}>duration: <p style={{color: "white"}}>{`${a.duration} hours`}</p></li>
+                              <li className={styles.dateItemLi}>season: <p style={{color: "white"}}>{a.season}</p></li>
                             </ul>
                           ))
                         ) : (

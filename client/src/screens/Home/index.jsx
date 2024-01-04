@@ -7,6 +7,7 @@ import { CardSkeleton } from "../../components/CardSkeleton";
 export const Home = () => {
   
   const { isLoading, handleFilterByContinent, handleSort, handleSortByPopulation, currentCountries, countries, paginado } = useCountries()
+
   return (
     <div className={styles.background}>
       <div className={styles.conteiner}>

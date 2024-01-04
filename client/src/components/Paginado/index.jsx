@@ -5,7 +5,6 @@ import arrowRight from '../../assets/arrow-fat-right.svg';
 
 export const Paginado = ({ countriesPerPage, countries, paginado }) => {
   const pageNumbers = [];
-  //console.log("page", pageNumbers);
   // aca le quite el Math.slice
   for (let i = 0; i <= ((countries + 1) / countriesPerPage); i++) {
     //Math.ceil redondea hacia arriba el numero
