@@ -135,3 +135,17 @@
     padding: 1rem 0;
   }
 }
+
+@media screen and (max-width: 685px) {
+  .formContainer {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .errorMessage {
+    font-size: 1rem;
+  }
+  .select{
+    font-size: 1rem;
+  }
+}

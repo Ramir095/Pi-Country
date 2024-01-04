@@ -16,16 +16,6 @@
     justify-content: center;
     gap: 20px 20px;
     grid-template-columns: 240px 240px;
-    width: 40%;
-}
-
-.card {
-    display: flex;
-    border: 1px solid white;
-    width: 40%;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
 }
 
 .itemOne {
@@ -75,17 +65,29 @@
     grid-template-columns: 240px 240px;
     padding-top: 10px;
     gap: 3px;
-    color: white;
+    color: #939aa2;
+}
+
+.dateItemLi {
+    display: flex;
+    gap: 0.4rem;
 }
 
 .flag {
-    /* margin-bottom: 50px; */
-    border: 1px solid white;
-    border-radius: 15px;
+    animation: rotar 6s linear infinite;
 }
 .flag img {
     border-radius: 15px;
 }
+
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg); ; /* ángulo inicial de rotación */
+    }
+    to {
+        transform: rotateY(360deg); /* ángulo final de rotación */
+    }
+  }
 
 .activities {
     background-color: rgba(110, 110, 110, 0.25);
@@ -105,3 +107,41 @@
 .activities ul {
     list-style: none;
 }
+
+
+@media screen and (max-width: 1342px) {
+    .flag {
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .conteinter {
+        height: 100vh;
+    }
+    .data {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .itemOne {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .title {
+        width: 17rem;
+        height: 4.5rem;
+        font-size: 1.1rem;
+
+    }
+
+    .itemLast {
+        width: 17rem;
+        font-size: 1rem;
+    }
+
+    .itemLi{
+        display: flex;
+        flex-direction: column;
+    }
+  }
