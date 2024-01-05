@@ -19,20 +19,23 @@ export const LoginScreen = () => {
   };
   return (
     <BackgroundLayout>
-      <form className={ `${styles.form} animate__animated animate__zoomIn` }>
-        <div>
-          <label className={ styles.label } htmlFor='name'>Name:</label>
-          <input 
-            name='name'
-            value={ name }
-            onChange={ handleChange }
-            className={ styles.input }
-            placeholder='user name'
-            type='text' 
-          />
-        </div>
-        <button className={ styles.buttonLogin } onClick={ handleLogin }>Login</button>
-      </form>
+      <div className={styles.containerSing}>
+        <h1>To create activities for countries you must log in with a user name. Enter any name you want</h1>
+        <form className={ `${styles.form} animate__animated animate__zoomIn` }>
+          <div>
+            <label className={ styles.label } htmlFor='name'>Name:</label>
+            <input 
+              name='name'
+              value={ name }
+              onChange={ handleChange }
+              className={ styles.input }
+              placeholder='User name'
+              type='text' 
+            />
+          </div>
+          <button className={ styles.buttonLogin } onClick={ handleLogin }>Login</button>
+        </form>
+      </div>
     </BackgroundLayout>
   )
 }
