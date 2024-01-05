@@ -5,6 +5,7 @@ import {
     GET_COUNTRY_DETAIL,
     ///CREATE_ACTIVITY,
     START_LOADING,
+    STOP_LOADING,
     FILTER_BY_CONTINENT,
     ORDER_BY_NAME,
     ORDER_BY_POPULATION,
@@ -14,10 +15,6 @@ import {
 } from './action-types';
 
 export const getAllCountries = () => {
-    // return async function (dispatch) { // cuando retornamos una funcion, el dispatch lo recibimos aca
-    // const response = await axios.get('https://render-countries.onrender.com/countries')
-    // return dispatch({ type: GET_ALL_COUNTRIES, payload: response.data })
-
     return async function (dispatch) { // cuando retornamos una funcion, el dispatch lo recibimos aca para que lo usemos para despachar la acción
         dispatch({type: START_LOADING})
         axios.get('https://render-countries.onrender.com/countries')
@@ -26,16 +23,14 @@ export const getAllCountries = () => {
     }
 };
 
-// return async function (dispatch) { // cuando retornamos una funcion, el dispatch lo recibimos aca
-//     const response = await axios.get('https://render-countries.onrender.com/countries')
-//     return dispatch({ type: GET_ALL_COUNTRIES, payload: response.data })
 export const getCountry = (titulo) => {
     return function(dispatch){
         dispatch({type: START_LOADING})
         axios.get(`https://render-countries.onrender.com/countries?name=${titulo}`)
         .then(r => r.data)
         .then(json => dispatch({ type: GET_COUNTRY, payload: json }))
-        .catch((error) => console.log(error.response.data.message))
+        .catch((error) => alert(error.response.data.message))
+        .finally(() => dispatch({type: STOP_LOADING}))
     }
 }
 
@@ -47,7 +42,6 @@ export const getCountryDetail = (id) => {
         .then(json => dispatch({ type: GET_COUNTRY_DETAIL, payload: json }))
     }
 };
-//let id = 0
 //---------------------------------------------------------------------------------------------
 export const getAllActivities = () => {
     return function(dispatch) {
@@ -99,7 +93,7 @@ export const login = (name = '') => {
 }
 
 export const logout = () => {
-    localStorage.removeItem('user'); // Limpiamos el local storage
+    localStorage.removeItem('user');
     localStorage.removeItem('logged');
     return {
         type: LOGOUT,
