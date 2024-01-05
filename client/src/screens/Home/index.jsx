@@ -6,7 +6,7 @@ import { CardSkeleton } from "../../components/CardSkeleton";
 
 export const Home = () => {
   
-  const { isLoading, handleFilterByContinent, handleSort, handleSortByPopulation, currentCountries, countries, paginado } = useCountries()
+  const { isLoading, handleFilterByContinent, handleSort, handleSortByPopulation, currentCountries, countries, paginado, prevPage, nextPage } = useCountries()
 
   return (
     <div className={styles.background}>
@@ -28,6 +28,8 @@ export const Home = () => {
                       countriesPerPage={10}
                       countries={countries.length}
                       paginado={paginado}
+                      prevPage={prevPage}
+                      nextPage={nextPage}
                     />
                   </div>
                 </>

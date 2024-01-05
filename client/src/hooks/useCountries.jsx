@@ -15,11 +15,22 @@ export const useCountries = () => {
   let currentCountries
   if(currentPage === 1) {
     currentCountries = countries.slice(0, 9)
-  } else {                        //   9,      19       
+  } else {     
     currentCountries = countries.slice(9 + (currentPage - 2) * 10, 19 + (currentPage - 2) * 10)
   }
 
-  const paginado = (pageNumber) => { setCurrentPage(pageNumber) }; 
+  const paginado = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  };
+
+  const nextPage = () => {
+    if (currentPage >= 26) return;
+    setCurrentPage(prev => prev + 1)
+  }
+  const prevPage = () => {
+    if (currentPage <= 1) return;
+    setCurrentPage(prev => prev - 1)
+  }
 
   useEffect(() => {
     dispatch(getAllCountries());
@@ -38,7 +49,6 @@ export const useCountries = () => {
     e.preventDefault();
     dispatch(orderByName(e.target.value))
     setCurrentPage(1);
-    // setea ordenado
     setOrden(`Ordenando ${e.target.value}`)
   }
 
@@ -53,6 +63,8 @@ export const useCountries = () => {
     isLoading,
     countries,
     paginado,
+    prevPage,
+    nextPage,
     currentCountries,
     handleClick,
     handleFilterByContinent,
