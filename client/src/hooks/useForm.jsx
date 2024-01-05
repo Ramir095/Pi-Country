@@ -69,13 +69,12 @@ export const useForm = (initialState = {}) => {
   const handleSelect = (e) => {
     setFormState({
       ...formState,
-      // country: [...formState.country, e.target.value],
       country: [e.target.value],
     });
   };
 
   return {
-    ...formState, //  =>  se puede mandar todas las props directamente haciendo esto
+    ...formState,
     formState,
     handleChange,
     setFormState,

@@ -3,6 +3,7 @@ import {
     GET_COUNTRY,
     GET_COUNTRY_DETAIL,
     START_LOADING,
+    STOP_LOADING,
     FILTER_BY_CONTINENT,
     ORDER_BY_NAME,
     ORDER_BY_POPULATION,
@@ -49,6 +50,11 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 loaded: false,
             }
+        case STOP_LOADING:
+        return {
+            ...state,
+            loaded: true,
+        }
         case FILTER_BY_CONTINENT:
             const allCountries = state.allCountries
             const continentFilter = action.payload === "All" ? allCountries : allCountries.filter(e => e.continent === action.payload)
@@ -109,7 +115,6 @@ const rootReducer = (state = initialState, action) => {
         case CREATE_ACTIVITY:
             return {
                 ...state,
-                //activities: [...state.activities, action.payload],
                 loaded: true,
             }
         case GET_ALL_ACTIVITIES:

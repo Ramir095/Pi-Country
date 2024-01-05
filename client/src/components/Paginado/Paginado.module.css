@@ -33,3 +33,9 @@
   background-color: rgba(255, 255, 255, 0.4);
   transition: 0.6s;
 }
+
+.numbers:active,
+.numbers:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: 0.6s;
+}
